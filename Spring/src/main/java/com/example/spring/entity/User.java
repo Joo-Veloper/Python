@@ -1,0 +1,27 @@
+package com.example.spring.entity;
+
+public class User {
+    String id;
+    String password;
+    String name;
+
+    public String getId() {
+        return id;
+    }
+    public String getPassword() {
+        return password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public User(String id, String password, String name) {
+        this.id = id;
+        this.password = password;
+        this.name = name;
+    }
+
+
+
+}
