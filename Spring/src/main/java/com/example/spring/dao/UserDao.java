@@ -1,5 +1,6 @@
 package com.example.spring.dao;
 
+import com.example.spring.connection.SimpleConnectionMaker;
 import com.example.spring.entity.User;
 
 import java.sql.*;
