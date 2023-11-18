@@ -13,15 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/articles")
 public class ArticleController {
     @Autowired
-
     private ArticleRepository articleRepository;
     @GetMapping("/new")
-
     public String newArticleForm() {
         return "articles/new";
     }
-    @PostMapping("/create")
 
+    @PostMapping("/create")
     public String createArticle(ArticleForm form) {
         System.out.println(form.toString());
         Article article = form.toEntity();
