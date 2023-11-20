@@ -17,6 +17,8 @@ public class MemberController {
     public String signUpPage(){
         return "members/new";
     }
+
+
     @PostMapping("/join")
     public String join(MemberForm memberForm){
         System.out.println(memberForm.toString());
