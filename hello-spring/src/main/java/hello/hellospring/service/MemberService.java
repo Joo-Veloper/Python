@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-@Service
+//@Service
 public class MemberService {
     private final MemberRepository memberRepository;
 
-    @Autowired
+    @Autowired // Spring 컨테이너에 올라가는 것만 AutoWired 기능 동작합니다.
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
