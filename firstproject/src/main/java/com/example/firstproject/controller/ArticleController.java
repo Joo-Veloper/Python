@@ -25,7 +25,7 @@ public class ArticleController {
     public String createArticle(ArticleForm form) {
         log.info(form.toString());// 로깅 코드
 //        System.out.println(form.toString());
-        //DTO를 엔티티로 변환
+        //DTO를 엔티티로 변환합니다.
         Article article = form.toEntity();
         log.info(article.toString());
 //        System.out.println(article.toString());
