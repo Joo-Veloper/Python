@@ -44,6 +44,7 @@ public class ArticleController {
         Article articleEntity = articleRepository.findById(id).orElse(null);
         //2. model data
         model.addAttribute("article", articleEntity);
-        return "";
+        //3. view page
+        return "article/show";
     }
 }
