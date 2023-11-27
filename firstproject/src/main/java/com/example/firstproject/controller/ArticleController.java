@@ -10,20 +10,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Slf4j //로깅 기능을 위한 어노테이션
 @Controller
-@RequestMapping("/articles")
+
 public class ArticleController {
     @Autowired
     private ArticleRepository articleRepository;
-    @GetMapping("/new")
+    @GetMapping("/articles/new")
     public String newArticleForm() {
         return "articles/new";
     }
 
-    @PostMapping("/create")
+    @PostMapping("/articles/create")
     public String createArticle(ArticleForm form) {
         log.info(form.toString());// 로깅 코드
 
@@ -45,6 +44,6 @@ public class ArticleController {
         //2. model data
         model.addAttribute("article", articleEntity);
         //3. view page
-        return "article/show";
+        return "articles/show";
     }
 }
