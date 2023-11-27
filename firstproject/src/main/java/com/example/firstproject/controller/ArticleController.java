@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -24,15 +25,21 @@ public class ArticleController {
     @PostMapping("/create")
     public String createArticle(ArticleForm form) {
         log.info(form.toString());// 로깅 코드
-//        System.out.println(form.toString());
+
         //DTO를 엔티티로 변환합니다.
         Article article = form.toEntity();
         log.info(article.toString());
-//        System.out.println(article.toString());
+
         // 리파지터리로 엔티티 DB에 저장
         Article saved = articleRepository.save(article);
         log.info(saved.toString());
         System.out.println(saved.toString());
+        return "";
+    }
+    @GetMapping("/articles/{id}")
+    public String show(@PathVariable Long id) {
+        log.info("id = " + id);
+
         return "";
     }
 }
