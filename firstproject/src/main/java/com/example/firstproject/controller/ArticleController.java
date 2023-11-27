@@ -42,7 +42,8 @@ public class ArticleController {
         log.info("id = " + id);
         //1. id 조회
         Article articleEntity = articleRepository.findById(id).orElse(null);
-
+        //2. model data
+        model.addAttribute("article", articleEntity);
         return "";
     }
 }
