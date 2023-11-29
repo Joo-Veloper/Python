@@ -46,4 +46,7 @@ public class ArticleController {
         //3. view page
         return "articles/show";
     }
+    public String index() {
+        return "";
+    }
 }
