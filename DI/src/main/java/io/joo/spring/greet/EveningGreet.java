@@ -1,6 +1,6 @@
-package io.joo.di.greet;
+package io.joo.spring.greet;
 
-import io.joo.di.repository.GreetRepository;
+import io.joo.spring.repository.GreetRepository;
 
 public class EveningGreet implements GreetRepository {
     @Override

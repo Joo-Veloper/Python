@@ -1,15 +1,14 @@
-package io.joo.di;
+package io.joo.spring;
 
-import io.joo.di.repository.GreetRepository;
+import io.joo.spring.repository.GreetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DiApplication {
+public class SpringApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(DiApplication.class, args)
-				.getBean(DiApplication.class).execute();
+		org.springframework.boot.SpringApplication.run(SpringApplication.class, args)
+				.getBean(SpringApplication.class).execute();
 	}
 
 	@Autowired
