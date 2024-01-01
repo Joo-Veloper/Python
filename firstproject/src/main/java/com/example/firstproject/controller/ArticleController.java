@@ -84,6 +84,6 @@ public class ArticleController {
         if (target != null) {
             articleRepository.save(articleEntity); // 엔티티를 DB에 저장(갱신)
         }
-        return " ";
+        return "redirect:/articles/" + articleEntity.getId();
     }
 }
